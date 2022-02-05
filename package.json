@@ -1,0 +1,27 @@
+{
+  "name": "warriors-the-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "start:dev": "ts-node-dev index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "@types/method-override": "^0.0.32",
+    "@types/uuid": "^8.3.4",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "method-override": "^3.0.0",
+    "mysql2": "^2.3.3",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8"
+  }
+}
