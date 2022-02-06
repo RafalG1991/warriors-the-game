@@ -5,6 +5,8 @@ import {handlebarsHelpers} from "./utils/handlebars-helpers";
 //routers
 import {menuRouter} from "./routers/menu";
 import {warriorRouter} from "./routers/warrior";
+//db
+import './utils/db';
 
 const app = express();
 
