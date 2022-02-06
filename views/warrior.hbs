@@ -1,0 +1,46 @@
+<h1>Creating new warrior</h1>
+<form action="/warrior" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <div>
+        <label for="strength">Strength:</label>
+        <input type="number" min="0" step="1" value="0" id="strength" name="str" class="stat-input">
+        <label for="defence">Defence:</label>
+        <input type="number" min="0" step="1" value="0" id="defence" name="def" class="stat-input">
+        <label for="endurance">Endurance:</label>
+        <input type="number" min="0" step="1" value="0" id="endurance" name="end" class="stat-input">
+        <label for="agility">Agility:</label>
+        <input type="number" min="0" step="1" value="0" id="agility" name="agi" class="stat-input">
+        <button type="reset">Reset points</button>
+    </div>
+    <button type="submit">Create</button>
+</form>
+
+<script>
+    const statsInputs = document.querySelectorAll('.stat-input');
+    const resetBtn = document.querySelector('button[type=reset]');
+
+    statsInputs.forEach(input => {
+      input.addEventListener('change', () => {
+        let sumValue = 0;
+        statsInputs.forEach(input => {
+            sumValue+=Number(input.value);
+            if(sumValue >= 10) {
+              statsInputs.forEach(input => {
+                  input.setAttribute('readonly', '');
+              });
+            }
+        });
+        console.log(sumValue);
+      });
+    });
+
+    resetBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      statsInputs.forEach(input => {
+        input.value = 0;
+        input.removeAttribute('readonly');
+      });
+    });
+
+</script>
