@@ -1,13 +1,14 @@
-import {Router} from 'express';
+import {Router, Request, Response} from 'express';
+import {WarriorRecord} from "../records/warrior.record";
 
 export const warriorRouter = Router();
 
 warriorRouter
-    .get('/', (req, res) => {
+    .get('/', (req: Request, res: Response) => {
         res.render('warrior');
     })
-    .post('/', (req, res) => {
-        const {name, strength, defence, endurance, agility} = req.body;
-        console.log(req.body);
+    .post('/', async (req: Request, res: Response) => {
+        const newWarrior: WarriorRecord = new WarriorRecord(req.body);
+        await newWarrior.addWarrior();
         res.redirect('/');
     })
