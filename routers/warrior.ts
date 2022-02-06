@@ -4,10 +4,10 @@ import {WarriorRecord} from "../records/warrior.record";
 export const warriorRouter = Router();
 
 warriorRouter
-    .get('/', (req: Request, res: Response) => {
+    .get('/', async (req: Request, res: Response): Promise<void> => {
         res.render('warrior');
     })
-    .post('/', async (req: Request, res: Response) => {
+    .post('/', async (req: Request, res: Response): Promise<void> => {
         const newWarrior: WarriorRecord = new WarriorRecord(req.body);
         await newWarrior.addWarrior();
         res.redirect('/');
