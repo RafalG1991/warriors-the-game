@@ -1,6 +1,7 @@
 import { pool } from '../utils/db';
 import { ValidationError } from '../utils/errors';
 import { v4 as uuid } from 'uuid';
+import {WarriorRecordResults} from "../types/warrior-type";
 
 export class WarriorRecord {
     public id?:string;
@@ -25,7 +26,7 @@ export class WarriorRecord {
         if(!this.id) {
             this.id = uuid();
         }
-        await pool.execute("INSERT INTO `warrior`(`id`, `name`, `str`, `def`, `end`, `agi`) VALUES(:id, :name, :str, :def, :end, :agi)", {
+        await pool.execute("INSERT INTO `warriors`(`id`, `name`, `str`, `def`, `end`, `agi`) VALUES(:id, :name, :str, :def, :end, :agi)", {
             id: this.id,
             name: this.name,
             str: this.str,
@@ -35,5 +36,11 @@ export class WarriorRecord {
         });
         return this.id;
     };
+
+    static async getAll(): Promise<WarriorRecord[]> {
+        const [results] = await pool.execute("SELECT * FROM `warriors` ORDER BY `wins` DESC") as WarriorRecordResults;
+        console.log(results);
+        return results.map(warrior => new WarriorRecord(warrior));
+    }
 
 }
