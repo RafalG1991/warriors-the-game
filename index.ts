@@ -9,6 +9,7 @@ import {warriorRouter} from "./routers/warrior";
 //db
 import './utils/db';
 import {handleError} from "./utils/errors";
+import { arenaRouter } from './routers/arena';
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.set('view engine', '.hbs');
 
 app.use('/', menuRouter);
 app.use('/warrior', warriorRouter);
+app.use('/arena', arenaRouter);
 
 app.use(handleError);
 
