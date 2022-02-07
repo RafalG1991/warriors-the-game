@@ -18,11 +18,10 @@ export class WarriorRecord {
             throw new ValidationError('You must choose unique name!');
         }
         if (
-            (Number(obj.str)+Number(obj.def)+Number(obj.end)+Number(obj.agi)>10) ||
+            Number(obj.str)+Number(obj.def)+Number(obj.end)+Number(obj.agi)!==10 ||
             Number(obj.str)>10 || Number(obj.def)>10 || Number(obj.end)>10 || Number(obj.agi)>10
         ) {
-            console.log(obj);
-            throw new ValidationError('You have only 10 skill points to distribute!');
+            throw new ValidationError('You have 10 skill points to distribute!');
         }
 
         this.id = obj.id;
