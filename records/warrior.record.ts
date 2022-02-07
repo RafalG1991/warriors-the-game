@@ -11,6 +11,7 @@ export class WarriorRecord {
     public end: number;
     public agi: number;
     public wins?: number;
+    public hp: number;
 
     constructor(obj: WarriorRecord) {
         if (!obj.name) {
@@ -26,11 +27,12 @@ export class WarriorRecord {
 
         this.id = obj.id;
         this.name = obj.name;
-        this.str = obj.str;
-        this.def = obj.def;
-        this.end = obj.end;
-        this.agi = obj.agi;
-        this.wins = obj.wins;
+        this.str = Number(obj.str);
+        this.def = Number(obj.def);
+        this.end = Number(obj.end);
+        this.agi = Number(obj.agi);
+        this.wins = Number(obj.wins);
+        this.hp = obj.end*10;
     }
 
     static async checkUniqueName(name: string): Promise<boolean> {
@@ -63,4 +65,17 @@ export class WarriorRecord {
         return results.map(warrior => new WarriorRecord(warrior));
     }
 
+    static async getOne(id: string): Promise<WarriorRecord> {
+        const [results] = await pool.execute("SELECT * FROM `warriors` WHERE `id` = :id", {
+            id,
+        }) as WarriorRecordResults;
+        return results.length === 0 ? null : new WarriorRecord(results[0]);
+    }
+
+    async addWin(): Promise<void> {
+        await pool.execute("UPDATE `warriors` SET `wins` = :wins WHERE `id` = :id", {
+            id: this.id,
+            wins: this.wins+1,
+        });
+    }
 }
