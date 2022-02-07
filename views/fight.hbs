@@ -1,6 +1,10 @@
 <h1>Fight!</h1>
 
-<p>{{warrior1.name}} vs {{warrior2.name}}</p>
+<p>
+    <span>{{warrior1.name}} strength: {{warrior1.str}}⚔️ defence: {{warrior1.def}}🛡️ endurance: {{warrior1.end}}⚡ agility: {{warrior1.agi}}💨 Health: {{calcInitHealth warrior1.end}}❤️ </span>
+    VS
+    <span>{{warrior2.name}} strength: {{warrior2.str}}⚔️ defence: {{warrior2.def}}🛡️ endurance: {{warrior2.end}}⚡ agility: {{warrior2.agi}}💨 Health: {{calcInitHealth warrior2.end}}❤️ </span>
+</p>
 
 <ul>
     {{#each battleLog}}
