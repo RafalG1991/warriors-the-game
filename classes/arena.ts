@@ -1,4 +1,5 @@
 import {WarriorRecord} from "../records/warrior.record";
+import {ValidationError} from "../utils/errors";
 
 enum ActiveWarrior {
     First,
@@ -12,7 +13,11 @@ export class Arena {
         public warrior1: WarriorRecord,
         public warrior2: WarriorRecord,
         public battleLog: string[],
-    ) {}
+    ) {
+        if(warrior1.id === warrior2.id) {
+            throw new ValidationError('You have to select two different warriors to fight!');
+        }
+    }
 
     round(): WarriorRecord | null {
         const attacker = this.activeWarrior === ActiveWarrior.First ? this.warrior1 : this.warrior2;

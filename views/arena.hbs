@@ -16,3 +16,24 @@
     </select>
     <button type="submit">Fight!</button>
 </form>
+
+<script>
+    const removeDuplicates = (chosenWarrior, optionsTable) => {
+        chosenWarrior.addEventListener('change', event => {
+            optionsTable.forEach(node => {
+                if(node.value === event.target.value) {
+                    node.setAttribute('disabled', '');
+                } else if (node.value) {
+                    node.removeAttribute('disabled');
+                }
+            });
+        });
+    }
+
+    const chosenWarrior1 = document.querySelector('#warrior1');
+    const chosenWarrior2 = document.querySelector('#warrior2');
+    const optionsTable1 = document.querySelector('#warrior1').childNodes;
+    const optionsTable2 = document.querySelector('#warrior2').childNodes;
+    removeDuplicates(chosenWarrior1, optionsTable2);
+    removeDuplicates(chosenWarrior2, optionsTable1);
+</script>
