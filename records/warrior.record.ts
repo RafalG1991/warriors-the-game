@@ -24,6 +24,14 @@ export class WarriorRecord {
             throw new ValidationError('You have 10 skill points to distribute!');
         }
 
+        if (
+            Number(obj.str)<=0 || Number(obj.def)<=0 || Number(obj.end)<=0 || Number(obj.agi)<=0
+        ) {
+            throw new ValidationError('Each attribute must be greater than zero!');
+        }
+
+
+
         this.id = obj.id;
         this.name = obj.name;
         this.str = Number(obj.str);
