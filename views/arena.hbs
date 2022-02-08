@@ -1,21 +1,28 @@
-<h1>Choose a warrior!</h1>
-<form action="/arena" method="POST">
-    <label for="warrior1">First warrior:</label>
-    <select name="warrior1" id="warrior1">
-        <option value="">Choose first warrior...</option>
-        {{#each warriors}}
-            <option value="{{this.id}}">{{this.name}}</option>
-        {{/each}}
-    </select>
-    <label for="warrior2">First warrior:</label>
-    <select name="warrior2" id="warrior2">
-        <option value="">Choose first warrior...</option>
-        {{#each warriors}}
-            <option value="{{this.id}}">{{this.name}}</option>
-        {{/each}}
-    </select>
-    <button type="submit">Fight!</button>
-</form>
+<div class="select-container">
+    <h1>Choose a warrior!</h1>
+    <form action="/arena" method="POST">
+        <div class="selection">
+            <label for="warrior1">First warrior:</label>
+            <select name="warrior1" id="warrior1">
+                <option value="">Choose first warrior...</option>
+                {{#each warriors}}
+                    <option value="{{this.id}}">{{this.name}}</option>
+                {{/each}}
+            </select>
+        </div>
+        ⚔️
+        <div class="selection">
+            <label for="warrior2">First warrior:</label>
+            <select name="warrior2" id="warrior2">
+                <option value="">Choose first warrior...</option>
+                {{#each warriors}}
+                    <option value="{{this.id}}">{{this.name}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <button id="fight-btn" type="submit">Fight!</button>
+    </form>
+</div>
 
 <script>
     const removeDuplicates = (chosenWarrior, optionsTable) => {

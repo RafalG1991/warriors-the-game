@@ -6,11 +6,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>WARRIORS: The Game</title>
+    <link rel="stylesheet" href="/assets/styles/style.css">
 </head>
 <body>
-    <header>
-        <div>WARRIORS: The Game</div>
-    </header>
-    {{{body}}}
+    {{> navbar }}
+        <div class="content-wrapper">
+            {{{body}}}
+        </div>
+
 </body>
 </html>

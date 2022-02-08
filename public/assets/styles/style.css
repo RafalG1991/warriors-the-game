@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.content-wrapper {
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*NAVIGATION*/
+
+.navbar {
+    height: 10vh;
+    background-color: #3d3d3d;
+    font-size: 24px;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.navbar ul li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    transition: 0.5s;
+}
+
+.navbar ul li a:hover {
+    color: red;
+}
+
+/*MAIN MENU*/
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    border: 2px solid #5a5a5a;
+    border-radius: 20px;
+    background-color: #3d3d3d;
+    color: white;
+}
+
+.menu-container h1 {
+    margin-bottom: 30px;
+    font-size: 48px;
+}
+
+.menu-container a {
+    display: block;
+    padding: 20px;
+    font-size: 24px;
+    color: white;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.menu-container a:hover {
+    transform: scale(110%);
+    color: red;
+}
+
+/* CREATE NEW WARRIOR FORM*/
+
+.creator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #5a5a5a;
+    border-radius: 20px;
+    background-color: #3d3d3d;
+    color: white;
+}
+
+.creator-container h1 {
+    margin-bottom: 30px;
+    font-size: 48px;
+}
+
+.creator-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.name-container label {
+    margin-right: 10px;
+}
+
+.skillpoints-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.skillpoints-container input {
+    margin: 0 10px;
+    width: 25px;
+}
+
+.skillpoints-container button {
+    padding: 0 5px;
+    background-color: white;
+    color: #3d3d3d;
+    border: 1px solid #3d3d3d;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.5s;
+}
+
+#submit-btn {
+    align-self: center;
+    width: 150px;
+    padding: 10px;
+    background-color: white;
+    color: #3d3d3d;
+    border: 1px solid #3d3d3d;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.5s;
+}
+
+form button:hover,
+#submit-btn:hover {
+    color: white;
+    background-color: #520a0a;
+}
+
+/*Select warriors form*/
+
+.select-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #5a5a5a;
+    border-radius: 20px;
+    background-color: #3d3d3d;
+    color: white;
+}
+
+.select-container form {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 24px;
+}
+
+.selection {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 40%;
+}
+
+#fight-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: white;
+    color: #3d3d3d;
+    border: 1px solid #3d3d3d;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.5s;
+}
+
+#fight-btn:hover {
+    color: white;
+    background-color: #520a0a;
+}
+
+/*FIGHT WINDOW*/
+
+.fight-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 2px solid #5a5a5a;
+    border-radius: 20px;
+    background-color: #3d3d3d;
+    color: white;
+}
+
+.fight-container h1 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.versus-container {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.warrior-description {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    font-size: 14px;
+}
+
+.warrior-description li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.warrior-description li:first-child {
+    display: flex;
+    justify-content: center;
+}
+
+.warrior-description li:first-child {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.battle-log {
+    font-size: 12px;
+}
+
+.battle-log li {
+    margin: 3px 5px;
+}
+
+.winner {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 20px;
+    align-self: center;
+    color: white;
+    background-color: #520a0a;
+}
+
+/*HALL OF FAME*/
+
+.fame-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    border: 2px solid #5a5a5a;
+    border-radius: 20px;
+    background-color: #3d3d3d;
+    color: white;
+}
+
+.fame-container h1 {
+    font-size: 32px;
+}
+
+.fame-container ul {
+    margin-top: 20px;
+}
+
+.fame-container ul li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}

@@ -73,6 +73,9 @@ export class WarriorRecord {
     }
 
     static async getOne(id: string): Promise<WarriorRecord> {
+        if(id === null) {
+            throw new ValidationError('This warrior does not exist!');
+        }
         const [results] = await pool.execute("SELECT * FROM `warriors` WHERE `id` = :id", {
             id,
         }) as WarriorRecordResults;

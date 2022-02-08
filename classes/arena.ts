@@ -14,6 +14,9 @@ export class Arena {
         public warrior2: WarriorRecord,
         public battleLog: string[],
     ) {
+        if(warrior1 === null || warrior2 === null) {
+            throw new ValidationError('You have to select warriors to fight!');
+        }
         if(warrior1.id === warrior2.id) {
             throw new ValidationError('You have to select two different warriors to fight!');
         }

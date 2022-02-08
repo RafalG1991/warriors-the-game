@@ -1,15 +1,31 @@
-<h1>Fight!</h1>
+<div class="fight-container">
+    <h1>Fight!</h1>
+    <div class="versus-container">
+        <ul class="warrior-description">
+            <li>{{warrior1.name}}</li>
+            <li>strength:<span>{{warrior1.str}}⚔️</span></li>
+            <li>defence:<span>{{warrior1.def}}🛡️</span></li>
+            <li>endurance:<span>{{warrior1.end}}⚡</span></li>
+            <li>agility:<span>{{warrior1.agi}}💨</span></li>
+            <li>Health:<span>{{calcInitHealth warrior1.end}}❤️</span></li>
+        </ul>
+        ⚔️
+        <ul class="warrior-description">
+            <li>{{warrior2.name}}</li>
+            <li>strength:<span>{{warrior2.str}}⚔️</span></li>
+            <li>defence:<span>{{warrior2.def}}🛡️</span></li>
+            <li>endurance:<span>{{warrior2.end}}⚡</span></li>
+            <li>agility:<span>{{warrior2.agi}}💨</span></li>
+            <li>Health:<span>{{calcInitHealth warrior2.end}}❤️</span></li>
+        </ul>
+    </div>
 
-<p>
-    <span>{{warrior1.name}} strength: {{warrior1.str}}⚔️ defence: {{warrior1.def}}🛡️ endurance: {{warrior1.end}}⚡ agility: {{warrior1.agi}}💨 Health: {{calcInitHealth warrior1.end}}❤️ </span>
-    VS
-    <span>{{warrior2.name}} strength: {{warrior2.str}}⚔️ defence: {{warrior2.def}}🛡️ endurance: {{warrior2.end}}⚡ agility: {{warrior2.agi}}💨 Health: {{calcInitHealth warrior2.end}}❤️ </span>
-</p>
+    <ul class="battle-log">
+        {{#each battleLog}}
+            <li>{{this}}</li>
+        {{/each}}
+    </ul>
 
-<ul>
-    {{#each battleLog}}
-        <li>{{this}}</li>
-    {{/each}}
-</ul>
+    <p class="winner">The winner: {{winner.name}}</p>
 
-<p>The winner: {{winner.name}}</p>
+</div>
