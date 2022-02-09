@@ -17,6 +17,9 @@ export class WarriorRecord {
         if (!obj.name) {
             throw new ValidationError('You must choose unique name!');
         }
+        if(obj.name.length>30) {
+            throw new ValidationError('Maximum name length is 30 characters!');
+        }
         if (
             Number(obj.str)+Number(obj.def)+Number(obj.end)+Number(obj.agi)!==10 ||
             Number(obj.str)>10 || Number(obj.def)>10 || Number(obj.end)>10 || Number(obj.agi)>10

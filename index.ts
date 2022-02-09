@@ -6,11 +6,13 @@ import 'express-async-errors';
 //routers
 import {menuRouter} from "./routers/menu";
 import {warriorRouter} from "./routers/warrior";
-//db
-import './utils/db';
-import {handleError} from "./utils/errors";
 import { arenaRouter } from './routers/arena';
 import { hallOfFameRouter } from './routers/hallOfFame';
+//db
+import './utils/db';
+// errors handling
+import {handleError} from "./utils/errors";
+
 
 const app = express();
 
