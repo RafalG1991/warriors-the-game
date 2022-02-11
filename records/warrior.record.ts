@@ -1,7 +1,7 @@
-import { pool } from '../utils/db';
-import { ValidationError } from '../utils/errors';
+import { pool } from '../utils/db.js';
+import { ValidationError } from '../utils/errors.js';
 import { v4 as uuid } from 'uuid';
-import {WarriorRecordResults} from "../types/warrior-type";
+import {WarriorRecordResults} from "../types/warrior-type.js";
 
 export class WarriorRecord {
     public id?:string;

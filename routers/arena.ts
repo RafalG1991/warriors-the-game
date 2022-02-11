@@ -1,6 +1,6 @@
 import {Router, Request, Response} from 'express';
-import {WarriorRecord} from "../records/warrior.record";
-import {Arena} from "../classes/arena";
+import {WarriorRecord} from "../records/warrior.record.js";
+import {Arena} from "../classes/arena.js";
 
 export const arenaRouter = Router();
 

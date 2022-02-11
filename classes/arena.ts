@@ -1,5 +1,5 @@
-import {WarriorRecord} from "../records/warrior.record";
-import {ValidationError} from "../utils/errors";
+import {WarriorRecord} from "../records/warrior.record.js";
+import {ValidationError} from "../utils/errors.js";
 
 enum ActiveWarrior {
     First,

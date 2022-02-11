@@ -1,5 +1,5 @@
 import {Router, Request, Response} from 'express';
-import {WarriorRecord} from "../records/warrior.record";
+import {WarriorRecord} from "../records/warrior.record.js";
 
 export const menuRouter = Router();
 

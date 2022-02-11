@@ -1,17 +1,17 @@
 import * as express from 'express';
 import {urlencoded, static as eStatic} from 'express';
 import {engine} from 'express-handlebars';
-import {handlebarsHelpers} from "./utils/handlebars-helpers";
+import {handlebarsHelpers} from "./utils/handlebars-helpers.js";
 import 'express-async-errors';
 //routers
-import {menuRouter} from "./routers/menu";
-import {warriorRouter} from "./routers/warrior";
-import { arenaRouter } from './routers/arena';
-import { hallOfFameRouter } from './routers/hallOfFame';
+import {menuRouter} from "./routers/menu.js";
+import {warriorRouter} from "./routers/warrior.js";
+import { arenaRouter } from './routers/arena.js';
+import { hallOfFameRouter } from './routers/hallOfFame.js';
 //db
-import './utils/db';
+import './utils/db.js';
 // errors handling
-import {handleError} from "./utils/errors";
+import {handleError} from "./utils/errors.js";
 
 
 const app = express();
