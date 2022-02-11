@@ -13,7 +13,6 @@ import './utils/db.js';
 // errors handling
 import {handleError} from "./utils/errors.js";
 
-
 const app = express ? express() : express_test();
 
 app.use(urlencoded({ extended: true }));
@@ -32,6 +31,6 @@ app.use('/hall-of-fame', hallOfFameRouter);
 
 app.use(handleError);
 
-app.listen(3000, 'localhost', () => {
+app.listen(Number(process.env.EXPRESS_PORT), 'localhost', () => {
     console.log('Listening...');
 });
