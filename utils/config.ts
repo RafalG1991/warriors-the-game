@@ -8,4 +8,6 @@ export default {
     database: process.env.DATABASE,
     namedPlaceholders: true,
     decimalNumbers: true,
+    connectionLimit: 20,
+    waitForConnections: true,
 }
