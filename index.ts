@@ -1,4 +1,6 @@
 import express, * as express_test from "express";
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 import {urlencoded, static as eStatic} from 'express';
 import {engine} from 'express-handlebars';
 import {handlebarsHelpers} from "./utils/handlebars-helpers.js";
@@ -13,6 +15,8 @@ import './utils/db.js';
 // errors handling
 import {handleError} from "./utils/errors.js";
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 const app = express ? express() : express_test();
 
 app.use(urlencoded({ extended: true }));
