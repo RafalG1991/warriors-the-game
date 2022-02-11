@@ -1,4 +1,4 @@
-import * as express from 'express';
+import express, * as express_test from "express";
 import {urlencoded, static as eStatic} from 'express';
 import {engine} from 'express-handlebars';
 import {handlebarsHelpers} from "./utils/handlebars-helpers.js";
@@ -14,7 +14,7 @@ import './utils/db.js';
 import {handleError} from "./utils/errors.js";
 
 
-const app = express();
+const app = express ? express() : express_test();
 
 app.use(urlencoded({ extended: true }));
 app.use(eStatic('public'));
