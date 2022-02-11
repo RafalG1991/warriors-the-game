@@ -16,7 +16,7 @@ import {handleError} from "./utils/errors.js";
 const app = express ? express() : express_test();
 
 app.use(urlencoded({ extended: true }));
-app.use(eStatic('public'));
+app.use(eStatic(__dirname + '/public'));
 app.engine('.hbs', engine({
     extname: '.hbs',
     helpers: handlebarsHelpers,
