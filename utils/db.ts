@@ -1,9 +1,4 @@
 import { createPool } from 'mysql2/promise';
+import config from './config';
 
-export const pool = createPool({
-    host: 'localhost',
-    user: 'root',
-    database: 'warriors_db',
-    namedPlaceholders: true,
-    decimalNumbers: true,
-});
+export const pool = createPool(config);
