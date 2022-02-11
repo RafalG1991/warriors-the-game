@@ -17,6 +17,9 @@ export class WarriorRecord {
         if (!obj.name) {
             throw new ValidationError('You must choose unique name!');
         }
+        if(obj.name.trim().length===0) {
+            throw new ValidationError('Name cannot contain only whitespaces!');
+        }
         if(obj.name.length>30) {
             throw new ValidationError('Maximum name length is 30 characters!');
         }
