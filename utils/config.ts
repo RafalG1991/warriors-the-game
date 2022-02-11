@@ -1,7 +1,7 @@
 import 'dotenv/config';
 
 export default {
-    port: Number(process.env.PORT),
+    port: Number(process.env.DB_PORT),
     host: process.env.HOST,
     user: process.env.USER,
     password: process.env.PASSWORD,

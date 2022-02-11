@@ -31,6 +31,6 @@ app.use('/hall-of-fame', hallOfFameRouter);
 
 app.use(handleError);
 
-app.listen(Number(process.env.EXPRESS_PORT), () => {
+app.listen(Number(process.env.PORT), () => {
     console.log('Listening...');
 });
