@@ -7,8 +7,6 @@
     "downlevelIteration": true,
     "lib": ["es6", "dom", "dom.iterable"],
     "outDir": "dist",
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true
   }
