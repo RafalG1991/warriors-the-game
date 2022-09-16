@@ -12,11 +12,19 @@ Maybe you can mention me or this repo in the acknowledgements too
     Welcome to the battle arena! Defeat the warriors who stand against you on the way to eternal glory!
     Create your own warrior and distribute your skill points among four attributes - strength, defence, endurance and agility to tailor your Hero to your needs.
   </p>
-  <p>My first project that connects my knowledge about TypeScript and node.js with Handlebars view engine and MariaDB database.</p>
-  
+    
   [💡 Live preview](https://warriors-the-game.herokuapp.com)
 </div>
-
+<div align="justify">
+  <p>My first project that connects my knowledge about TypeScript and node.js with Handlebars view engine and MariaDB database. The fighting mechanism is based on my own algorithm that takes into consideration four warrior's attributes - strength, defence, endurance and agility and a dice roll. On the start of the battle each character gets a certain number of hit points (HP) based on the endurance points multiplied by 10. Agile hero - with sum of agility and defense greater than attacker strength - can dodge the attack on lucky dice roll (5 or more dots). On successfull attack the defender can also block some hit points if he has the defense points left. The attack strength is calculated on each round by multiplying the strength points by a result of a dice roll (from 1 to 6). The game ends when one of the warrior's HP goes to 0.
+  </p>
+  </div>
+  <div align="center">
+  <h3>
+    Check different skill builds and create the invincible warrior! Hall of fame awaits you!
+  </h3>
+</div>
+  
 <br />
 
 <!-- Table of Contents -->
@@ -44,8 +52,8 @@ Maybe you can mention me or this repo in the acknowledgements too
 ### :camera: Screenshots
 
 <div align="center"> 
- ![image](https://user-images.githubusercontent.com/92755273/190611507-9fa1620e-1357-4e8a-86e3-4effbaf43c16.png)
- ![image](https://user-images.githubusercontent.com/92755273/190611792-6077c6ca-2ae5-4ddc-aabe-839eba9f00c0.png)
+ <img src="https://user-images.githubusercontent.com/92755273/190611507-9fa1620e-1357-4e8a-86e3-4effbaf43c16.png" alt="screenshot">
+ <img src="https://user-images.githubusercontent.com/92755273/190611792-6077c6ca-2ae5-4ddc-aabe-839eba9f00c0.png" alt="screenshot">
 </div>
 
 <!-- TechStack -->
@@ -71,6 +79,14 @@ Maybe you can mention me or this repo in the acknowledgements too
 <!-- Features -->
 
 ## :gem: Features
+
+#### Adding new warrior
+
+![add_warrior](https://user-images.githubusercontent.com/92755273/190630304-c20b9662-e5c1-417e-9ffa-ab488919f5ff.gif)
+
+#### Choosing warriors and fighting
+
+![fight](https://user-images.githubusercontent.com/92755273/190631798-036f42fc-e640-4ebe-a83b-5f85a429dbce.gif)
 
 
 <!-- API endpoints documentation -->
